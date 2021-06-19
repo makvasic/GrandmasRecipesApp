@@ -1,0 +1,158 @@
+Index: app/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>apply plugin: 'com.android.application'\napply plugin: 'kotlin-android'\napply plugin: 'kotlin-android-extensions'\napply plugin: 'kotlin-kapt'\napply plugin: 'androidx.navigation.safeargs'\n\nandroid {\n    compileSdkVersion 28\n\n    signingConfigs {\n        relese {\n            //defined in gradle.properties\n            keyAlias KEY_ALIAS\n            keyPassword KEY_PASSWORD\n            storeFile file(KEYSTORE_PATH)\n            storePassword KEYSTORE_PASSWORD\n        }\n    }\n\n    defaultConfig {\n        applicationId \"mak.onelinecoding.grandmasrecipesapp\"\n        minSdkVersion 17\n        targetSdkVersion 28\n        versionCode 106\n        versionName \"1.0.6\"\n    }\n    buildTypes {\n\n        debug {\n            applicationIdSuffix '.debug'\n            versionNameSuffix '-DEBUG'\n        }\n\n        release {\n            minifyEnabled true\n            shrinkResources true\n            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'\n            signingConfig signingConfigs.relese\n        }\n    }\n\n    flavorDimensions \"status\"\n    productFlavors {\n        free {\n\n        }\n\n        paid {\n            applicationId 'mak.onelinecoding.grandmasrecipesapp.paid'\n        }\n    }\n}\n\nandroidExtensions {\n    experimental = true\n}\n\next {\n    support_version = '1.0.2'\n    room_version = '2.1.0-beta01'\n    lifecycle_version = '2.2.0-alpha01'\n    navigationVersion = \"2.0.0\"\n}\n\ndependencies {\n    implementation \"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version\"\n    implementation \"androidx.appcompat:appcompat:1.1.0-alpha05\"\n    implementation \"androidx.recyclerview:recyclerview:1.1.0-alpha05\"\n    implementation 'androidx.viewpager2:viewpager2:1.0.0-alpha04'\n    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'\n\n    implementation \"androidx.room:room-runtime:$room_version\"\n    implementation \"androidx.room:room-ktx:$room_version\"\n    kapt \"androidx.room:room-compiler:$room_version\"\n    implementation \"androidx.lifecycle:lifecycle-extensions:$lifecycle_version\"\n    implementation \"androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version\"\n    kapt \"androidx.lifecycle:lifecycle-compiler:$lifecycle_version\"\n\n    implementation \"androidx.navigation:navigation-fragment:$navigationVersion\"\n    implementation \"androidx.navigation:navigation-ui:$navigationVersion\"\n\n    implementation 'de.hdodenhof:circleimageview:2.2.0'\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/build.gradle	(revision 6222d87187326f705078cd198ca1bb1a954ecf21)
++++ app/build.gradle	(date 1559807460121)
+@@ -66,7 +66,7 @@
+     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+     implementation "androidx.appcompat:appcompat:1.1.0-alpha05"
+     implementation "androidx.recyclerview:recyclerview:1.1.0-alpha05"
+-    implementation 'androidx.viewpager2:viewpager2:1.0.0-alpha04'
++    implementation 'androidx.viewpager2:viewpager2:1.0.0-alpha05'
+     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+ 
+     implementation "androidx.room:room-runtime:$room_version"
+Index: .idea/runConfigurations.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"RunConfigurationProducerService\">\n    <option name=\"ignoredProducers\">\n      <set>\n        <option value=\"org.jetbrains.plugins.gradle.execution.test.runner.AllInPackageGradleConfigurationProducer\" />\n        <option value=\"org.jetbrains.plugins.gradle.execution.test.runner.TestClassGradleConfigurationProducer\" />\n        <option value=\"org.jetbrains.plugins.gradle.execution.test.runner.TestMethodGradleConfigurationProducer\" />\n      </set>\n    </option>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/runConfigurations.xml	(revision 6222d87187326f705078cd198ca1bb1a954ecf21)
++++ .idea/runConfigurations.xml	(date 1624116732766)
+@@ -3,6 +3,7 @@
+   <component name="RunConfigurationProducerService">
+     <option name="ignoredProducers">
+       <set>
++        <option value="com.android.tools.idea.compose.preview.runconfiguration.ComposePreviewRunConfigurationProducer" />
+         <option value="org.jetbrains.plugins.gradle.execution.test.runner.AllInPackageGradleConfigurationProducer" />
+         <option value="org.jetbrains.plugins.gradle.execution.test.runner.TestClassGradleConfigurationProducer" />
+         <option value="org.jetbrains.plugins.gradle.execution.test.runner.TestMethodGradleConfigurationProducer" />
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ProjectModuleManager\">\n    <modules>\n      <module fileurl=\"file://$PROJECT_DIR$/GrandmasRecipesApp.iml\" filepath=\"$PROJECT_DIR$/GrandmasRecipesApp.iml\" />\n      <module fileurl=\"file://$PROJECT_DIR$/app/app.iml\" filepath=\"$PROJECT_DIR$/app/app.iml\" />\n    </modules>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/modules.xml	(revision 6222d87187326f705078cd198ca1bb1a954ecf21)
++++ .idea/modules.xml	(date 1624116732750)
+@@ -3,7 +3,7 @@
+   <component name="ProjectModuleManager">
+     <modules>
+       <module fileurl="file://$PROJECT_DIR$/GrandmasRecipesApp.iml" filepath="$PROJECT_DIR$/GrandmasRecipesApp.iml" />
+-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
++      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/GrandmasRecipesApp.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/GrandmasRecipesApp.app.iml" />
+     </modules>
+   </component>
+ </project>
+\ No newline at end of file
+Index: build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>// Top-level build file where you can add configuration options common to all sub-projects/modules.\n\nbuildscript {\n    ext.kotlin_version = '1.3.31'\n    repositories {\n        google()\n        mavenCentral()\n    }\n    dependencies {\n        classpath 'com.android.tools.build:gradle:3.4.1'\n        classpath \"org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version\"\n        classpath \"androidx.navigation:navigation-safe-args-gradle-plugin:2.1.0-alpha04\"\n\n        // NOTE: Do not place your application dependencies here; they belong\n        // in the individual module build.gradle files\n    }\n}\n\nallprojects {\n    repositories {\n        google()\n        mavenCentral()\n    }\n}\n\ntask clean(type: Delete) {\n    delete rootProject.buildDir\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- build.gradle	(revision 6222d87187326f705078cd198ca1bb1a954ecf21)
++++ build.gradle	(date 1559807460133)
+@@ -9,7 +9,7 @@
+     dependencies {
+         classpath 'com.android.tools.build:gradle:3.4.1'
+         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+-        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:2.1.0-alpha04"
++        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:2.1.0-alpha05"
+ 
+         // NOTE: Do not place your application dependencies here; they belong
+         // in the individual module build.gradle files
+Index: .idea/encodings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/encodings.xml	(date 1559807308941)
++++ .idea/encodings.xml	(date 1559807308941)
+@@ -0,0 +1,4 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="Encoding" addBOMForNewFiles="with NO BOM" />
++</project>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"NullableNotNullManager\">\n    <option name=\"myDefaultNullable\" value=\"android.support.annotation.Nullable\" />\n    <option name=\"myDefaultNotNull\" value=\"android.support.annotation.NonNull\" />\n    <option name=\"myNullables\">\n      <value>\n        <list size=\"10\">\n          <item index=\"0\" class=\"java.lang.String\" itemvalue=\"org.jetbrains.annotations.Nullable\" />\n          <item index=\"1\" class=\"java.lang.String\" itemvalue=\"javax.annotation.Nullable\" />\n          <item index=\"2\" class=\"java.lang.String\" itemvalue=\"javax.annotation.CheckForNull\" />\n          <item index=\"3\" class=\"java.lang.String\" itemvalue=\"edu.umd.cs.findbugs.annotations.Nullable\" />\n          <item index=\"4\" class=\"java.lang.String\" itemvalue=\"android.support.annotation.Nullable\" />\n          <item index=\"5\" class=\"java.lang.String\" itemvalue=\"androidx.annotation.Nullable\" />\n          <item index=\"6\" class=\"java.lang.String\" itemvalue=\"androidx.annotation.RecentlyNullable\" />\n          <item index=\"7\" class=\"java.lang.String\" itemvalue=\"org.checkerframework.checker.nullness.qual.Nullable\" />\n          <item index=\"8\" class=\"java.lang.String\" itemvalue=\"org.checkerframework.checker.nullness.compatqual.NullableDecl\" />\n          <item index=\"9\" class=\"java.lang.String\" itemvalue=\"org.checkerframework.checker.nullness.compatqual.NullableType\" />\n        </list>\n      </value>\n    </option>\n    <option name=\"myNotNulls\">\n      <value>\n        <list size=\"9\">\n          <item index=\"0\" class=\"java.lang.String\" itemvalue=\"org.jetbrains.annotations.NotNull\" />\n          <item index=\"1\" class=\"java.lang.String\" itemvalue=\"javax.annotation.Nonnull\" />\n          <item index=\"2\" class=\"java.lang.String\" itemvalue=\"edu.umd.cs.findbugs.annotations.NonNull\" />\n          <item index=\"3\" class=\"java.lang.String\" itemvalue=\"android.support.annotation.NonNull\" />\n          <item index=\"4\" class=\"java.lang.String\" itemvalue=\"androidx.annotation.NonNull\" />\n          <item index=\"5\" class=\"java.lang.String\" itemvalue=\"androidx.annotation.RecentlyNonNull\" />\n          <item index=\"6\" class=\"java.lang.String\" itemvalue=\"org.checkerframework.checker.nullness.qual.NonNull\" />\n          <item index=\"7\" class=\"java.lang.String\" itemvalue=\"org.checkerframework.checker.nullness.compatqual.NonNullDecl\" />\n          <item index=\"8\" class=\"java.lang.String\" itemvalue=\"org.checkerframework.checker.nullness.compatqual.NonNullType\" />\n        </list>\n      </value>\n    </option>\n  </component>\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_1_7\" project-jdk-name=\"1.8\" project-jdk-type=\"JavaSDK\">\n    <output url=\"file://$PROJECT_DIR$/build/classes\" />\n  </component>\n  <component name=\"ProjectType\">\n    <option name=\"id\" value=\"Android\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/misc.xml	(revision 6222d87187326f705078cd198ca1bb1a954ecf21)
++++ .idea/misc.xml	(date 1624116732742)
+@@ -5,7 +5,7 @@
+     <option name="myDefaultNotNull" value="android.support.annotation.NonNull" />
+     <option name="myNullables">
+       <value>
+-        <list size="10">
++        <list size="14">
+           <item index="0" class="java.lang.String" itemvalue="org.jetbrains.annotations.Nullable" />
+           <item index="1" class="java.lang.String" itemvalue="javax.annotation.Nullable" />
+           <item index="2" class="java.lang.String" itemvalue="javax.annotation.CheckForNull" />
+@@ -16,12 +16,16 @@
+           <item index="7" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.qual.Nullable" />
+           <item index="8" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.compatqual.NullableDecl" />
+           <item index="9" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.compatqual.NullableType" />
++          <item index="10" class="java.lang.String" itemvalue="com.android.annotations.Nullable" />
++          <item index="11" class="java.lang.String" itemvalue="org.eclipse.jdt.annotation.Nullable" />
++          <item index="12" class="java.lang.String" itemvalue="io.reactivex.annotations.Nullable" />
++          <item index="13" class="java.lang.String" itemvalue="io.reactivex.rxjava3.annotations.Nullable" />
+         </list>
+       </value>
+     </option>
+     <option name="myNotNulls">
+       <value>
+-        <list size="9">
++        <list size="13">
+           <item index="0" class="java.lang.String" itemvalue="org.jetbrains.annotations.NotNull" />
+           <item index="1" class="java.lang.String" itemvalue="javax.annotation.Nonnull" />
+           <item index="2" class="java.lang.String" itemvalue="edu.umd.cs.findbugs.annotations.NonNull" />
+@@ -31,11 +35,15 @@
+           <item index="6" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.qual.NonNull" />
+           <item index="7" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.compatqual.NonNullDecl" />
+           <item index="8" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.compatqual.NonNullType" />
++          <item index="9" class="java.lang.String" itemvalue="com.android.annotations.NonNull" />
++          <item index="10" class="java.lang.String" itemvalue="org.eclipse.jdt.annotation.NonNull" />
++          <item index="11" class="java.lang.String" itemvalue="io.reactivex.annotations.NonNull" />
++          <item index="12" class="java.lang.String" itemvalue="io.reactivex.rxjava3.annotations.NonNull" />
+         </list>
+       </value>
+     </option>
+   </component>
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" project-jdk-name="1.8" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/build/classes" />
+   </component>
+   <component name="ProjectType">
+Index: .idea/gradle.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"GradleSettings\">\n    <option name=\"linkedExternalProjectsSettings\">\n      <GradleProjectSettings>\n        <option name=\"distributionType\" value=\"DEFAULT_WRAPPED\" />\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\n        <option name=\"modules\">\n          <set>\n            <option value=\"$PROJECT_DIR$\" />\n            <option value=\"$PROJECT_DIR$/app\" />\n          </set>\n        </option>\n        <option name=\"resolveModulePerSourceSet\" value=\"false\" />\n      </GradleProjectSettings>\n    </option>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/gradle.xml	(revision 6222d87187326f705078cd198ca1bb1a954ecf21)
++++ .idea/gradle.xml	(date 1624116732754)
+@@ -1,8 +1,10 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="GradleMigrationSettings" migrationVersion="1" />
+   <component name="GradleSettings">
+     <option name="linkedExternalProjectsSettings">
+       <GradleProjectSettings>
++        <option name="testRunner" value="PLATFORM" />
+         <option name="distributionType" value="DEFAULT_WRAPPED" />
+         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+         <option name="modules">

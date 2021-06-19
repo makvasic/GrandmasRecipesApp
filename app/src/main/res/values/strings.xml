@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name" translatable="false">Bakini Brzi Recepti</string>
+    <string name="menu_item_search" translatable="false">Search</string>
+    <string name="menu_item_info" translatable="false">Info</string>
+
+    <string name="info_title">O receptima</string>
+    <string name="search_empty">Nema takvih recepata</string>
+    <string name="search_by_name">po nazivu</string>
+    <string name="search_by_ingredient">po sastojku</string>
+    <string name="search_query_hint">Pretražite…</string>
+    <string name="search_error_too_short">Morate uneti najmanje 2 karaktera</string>
+
+    <string name="recipe_preparation">Priprema:</string>
+    <string name="recipe_ingredients">Sastojci:</string>
+
+
+    <!--<string name="info_title">About recipes</string>-->
+    <!--<string name="search_empty">No recipes like that</string>-->
+    <!--<string name="search_query_hint">Search…</string>-->
+    <!--<string name="search_by_name">by name</string>-->
+    <!--<string name="search_by_ingredient">by ingredient</string>-->
+    <string name="about_us_text" translatable="false">
+        \t\tDanas kada je tempo života dinamičan sve se manje pažnje posvećuje ishrani, imajući ovo u vidu, trudila sam se da napravim izbor najekonomičnijih recepata.
+        \n\n
+	    \t\tŽelim da budu od koristi za lako i brzo spremanje hrane srpske domaće kuhinje sa raznim specijalitetima.
+        \n\n
+	    \t\tRecepti su rezultat mog velikog iskustva i raznih kombinacija po sopstvenom izboru. Duža tradicija svedoči o vrednosti ovih jela i predstavlja najtemeljniji deo naše trpeze u koji se možemo uzdati u svakoj prilici.
+        \n\n
+	    \t\tNakon odlaska u penziju poželela sam da ove specijalitete ostavim mlađim pokolenjima kako se ne bi zaboravila stara srpska kuhinja.
+    </string>
+    <string name="about_us_signature" translatable="false">Milica Ćebić iz Novog Sada</string>
+
+</resources>

@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name" translatable="false">Grandma\'s Quick Recipes</string>
+    <string name="menu_item_search" translatable="false">Search</string>
+    <string name="menu_item_info" translatable="false">Info</string>
+
+    <string name="info_title">About recipes</string>
+
+    <string name="search_empty">There\'s no recipes like that</string>
+    <string name="search_by_name">by name</string>
+    <string name="search_by_ingredient">by ingredient</string>
+    <string name="search_query_hint">Search…</string>
+    <string name="search_error_too_short">You must enter at least 2 characters</string>
+
+    <string name="recipe_preparation">Preparation:</string>
+    <string name="recipe_ingredients">Ingredients:</string>
+
+    <string name="about_us_text" translatable="false">
+        \t\tToday, when the tempo of life is dynamic, less and less attention is being paid to nutrition, and with this in mind, I have tried to make a selection of the most economical recipes.
+        \n\n
+	    \t\tI intended for them to be of use for an easy and quick preparation of foods which belong to Serbian national cuisine with various specialties.
+        \n\n
+	    \t\tThe recipes are the result of my great experience and of various combinations of my own choice. The long tradition testifies to the value of these dishes and represents the most basic aspect of our cuisine which we can rely on in every occasion.
+        \n\n
+	    \t\tAfter retirement, I wanted to leave these specialties to younger generations so that the old Serbian cuisine is not forgotten.
+    </string>
+    <string name="about_us_signature" translatable="false">Milica Ćebić from Novi Sad</string>
+
+</resources>

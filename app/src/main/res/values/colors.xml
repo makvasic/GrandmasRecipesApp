@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--blue pink-->
+    <!--<color name="colorPrimary">#3F51B5</color>-->
+    <!--<color name="colorPrimaryDark">#303F9F</color>-->
+    <!--<color name="colorAccent">#FF4081</color>-->
+
+    <!--orange purple-->
+    <!--<color name="colorPrimary">#f57c00</color>-->
+    <!--<color name="colorPrimaryDark">#bb4d00</color>-->
+    <!--<color name="colorAccent">#aa00ff</color>-->
+
+    <!--orange green-->
+    <!--<color name="colorPrimary">#ffe082</color>-->
+    <!--<color name="colorPrimaryDark">#caae53</color>-->
+    <!--<color name="colorPrimaryLight">#ffffb3</color>-->
+    <!--<color name="colorAccent">#00e676</color>-->
+
+    <!--green orange-->
+    <!--<color name="searchPrimary">#a5d6a7</color>-->
+    <!--<color name="searchPrimaryDark">#75a478</color>-->
+    <!--<color name="searchPrimaryLight">#d7ffd9</color>-->
+    <!--<color name="searchAccent">#ffea00</color>-->
+
+    <!--green yellow-->
+    <color name="colorPrimary">#4caf50</color>
+    <color name="colorPrimaryDark">#087f23</color>
+    <color name="colorPrimaryLight">#80e27e</color>
+    <color name="colorAccent">#2962ff</color>
+
+    <color name="yellowLight">#ffe0b2</color>
+
+    <color name="white">#FFF</color>
+    <color name="black">#000</color>
+</resources>
